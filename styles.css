@@ -73,8 +73,8 @@ nav a {
 }
 
 .logo {
-    height: 100px;
-    max-height: 100px;
+    height: 300px;
+    max-height: 300px;
     width: auto;
     object-fit: contain;
 }
@@ -83,6 +83,7 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 0;
 }
 
 footer {
