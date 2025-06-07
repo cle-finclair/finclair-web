@@ -1,0 +1,25 @@
+name: Deploy to Finclair Droplet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 143.110.151.114 >> ~/.ssh/known_hosts
+
+      - name: Sync site files to droplet
+        run: |
+          rsync -avz --delete ./ cle@143.110.151.114:/var/www/finclair
