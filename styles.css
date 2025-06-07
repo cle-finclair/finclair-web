@@ -21,7 +21,7 @@ body {
 header {
   background: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 20px 0;
+  padding: 0;
 }
 
 header h1 {
@@ -34,11 +34,22 @@ nav {
   float: right;
 }
 
+/*
 nav a {
-  margin-left: 20px;
+  line-height: 1;
+  padding: 4px 0;
+}
+*/
+
+nav a {
+  margin-left: 40px;
   text-decoration: none;
-  color: #0077cc;
+  color: #000;
   font-weight: 500;
+}
+
+nav a:hover {
+  color: #005fa3;
 }
 
 .hero {
@@ -73,17 +84,26 @@ nav a {
 }
 
 .logo {
-    height: 300px;
-    max-height: 300px;
+    height: 270px;
     width: auto;
     object-fit: contain;
 }
-
+/*
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    height: 100px;
+    padding: 0 0;
+}
+*/
+.header-inner {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 48px 0 24px; 
+    height: 120px;
 }
 
 footer {
