@@ -22,4 +22,8 @@ jobs:
 
       - name: Sync site files to droplet
         run: |
-          rsync -avz --delete ./ cle@143.110.151.114:/var/www/finclair
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            -e "ssh -i ~/.ssh/id_ed25519" \
+            ./ cle@143.110.151.114:/var/www/finclair
