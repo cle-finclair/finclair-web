@@ -72,6 +72,17 @@ nav a {
   background: #005fa3;
 }
 
+.logo {
+    height: 40px;
+    vertical-align: middle;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 footer {
   text-align: center;
   padding: 40px 0;
