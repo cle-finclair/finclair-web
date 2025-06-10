@@ -3,34 +3,343 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Finclair – Clear Finances, Confident Future</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Finclair – Financial Clarity for Small Businesses</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
+  <!--<link rel="stylesheet" href="styles.css" />-->
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      font-family: 'Newsreader', serif;
+      margin: 0;
+      background: #fdf8eb;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      background-color: #0d1b2a;
+      height: 100px;
+      border-bottom: none;
+    }
+    
+    nav a {
+      color: #fdf8eb;
+      margin-left: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #fbbf24;
+    }
+    .grid-item {
+      text-align: center;
+    }
+    .grid-item p {
+      font-size: 1.1rem; /* or try 1.2rem for a little more */
+      line-height: 1.6;
+      color: #333;
+    }
+    .hero {
+      background-color: #0d1b2a;
+      padding: 180px 24px;
+      text-align: center;
+      color: #fefaf3;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #fdf8eb;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #fdf8eb;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-button {
+      background-color: #fbbf24;
+      color: #0d1b2a;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #f59e0b;
+    }
+    .circle-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 12px 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section {
+      background: #fdf8eb;
+      color: #111827;
+      padding: 150px 0px;
+    }
+    /*
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      color: #111827;
+      text-align: left;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }*/
+    .section h2 {
+      color: #0d1b2a;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-style: normal;
+      font-family: 'Newsreader', serif;
+      margin-top: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .grid-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .grid-item p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .pricing-banner {
+      background-image: url('assets/pricing-pic.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 320px 0;
+      position: relative;
+      color: #f8f9fa; /* Off-white text */
+    }        
+
+    .pricing-banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.3); /* subtle overlay for better text readability */
+    }
+
+    .pricing-banner-content {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .pricing-banner h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-align: left;
+      color: #ffffff;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 140px; /* adjust as needed */
+      width: auto;
+      object-fit: contain;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-subtext {
+      font-size: 0.65rem;
+      color: #d6d3cd;  /* or #0d1b2a if you're on a light background */
+      font-weight: 400;
+      white-space: nowrap;
+      margin-top: 19px;
+      margin-left: -7.5px;
+    }
+    
+    .pricing-banner p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .pricing-banner .cta-button {
+      background-color: #f8f9fa;
+      color: #001f3f; /* Dark blue */
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .pricing-banner .cta-button:hover {
+      background-color: #eaeaea;
+    }
+      
+    .why-finclair {
+      background-color: #fdf8eb;
+      color: #0d1b2a;
+      padding: 180px 20px;
+      text-align: center;
+    }
+
+    .why-finclair .features {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .why-finclair h2 {
+      color: #0d1b2a;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-style: normal;
+      font-family: 'Newsreader', serif;
+      margin-top: 40px;
+    }
+
+    .why-finclair .feature {
+      max-width: 300px;
+    }
+
+    .why-finclair .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .why-finclair .feature-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .why-finclair .feature-desc {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .why-finclair .cta-button {
+      margin-top: 0; 
+    }
+    footer {
+      background-color: #fdf8eb;
+      color: #111827;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 0.95rem;  
+    }
+
+  </style>
 </head>
 <body>
   <header>
-    <div class="header-inner">
-        <img src="assets/finclair-logo-transparent.png" alt="Finclair logo" class="logo" />
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
+    <a href="index.html" class="logo-link">
+      <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
+      <span class="logo-subtext">Bookkeeping & Tax</span> 
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="hero">
-    <div class="container">
-      <h2>Clear Finances. Confident Future.</h2>
-      <p>Bookkeeping and accounting made effortless for small businesses.</p>
-      <a href="#" class="cta-button">Get Started</a>
+  <section class="hero">
+    <h1>Clarity in Bookkeeping & Financial Services</h1>
+    <p>Helping small businesses understand their numbers and make confident decisions.</p>
+    <a href="contact.html" class="cta-button">Book a Consultation</a>
+  </section>
+
+  <section class="section">
+    <h2>What We Do</h2>
+    <div class="grid">
+      <div class="grid-item">
+        <h3>Bookkeeping</h3>
+        <img src="assets/bookkeeping-pic.jpg" alt="Bookkeeping" class="circle-img">
+        <p>Monthly reconciliations, clean general ledger, and ready-to-file financials.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Payroll</h3>
+        <img src="assets/payroll-pic.jpg" alt="Payroll" class="circle-img">
+        <p>Full-service payroll, automated filings, and year-end W-2 / 1099 prep.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Tax Prep</h3>
+        <img src="assets/tax-pic.jpg" alt="Tax Prep" class="circle-img">
+        <p>Stress-free sales-tax calculations, filings, and compliance monitoring.</p>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <section class="pricing-banner">
+    <div class="pricing-banner-content">
+      <h2>Our Pricing</h2>
+      <p>Our client pricing is based on your needs.</p>
+      <a href="pricing.html" class="cta-button">Our Pricing</a>
+    </div>
+  </section>
+
+  <section class="why-finclair">
+    <div class="container">
+      <h2>Why Finclair?</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="icon">✅</div>
+          <h3>Transparent Pricing</h3>
+          <p>Know what you’re paying for, no surprises.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📈</div>
+          <h3>Results-Driven</h3>
+          <p>We help clients make confident, informed financial decisions.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🤝</div>
+          <h3>Personalized Support</h3>
+          <p>We’re not just your accountants — we’re your partners.</p>
+        </div>
+      </div>
+      
+      <a href="contact.html" class="cta-button">Schedule a Free Consultation</a>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Finclair. All rights reserved.</p>
-    </div>
+    &copy; 2025 Finclair Group. All rights reserved.
   </footer>
 </body>
 </html>
+

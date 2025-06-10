@@ -1,62 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Finclair</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Finclair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Newsreader', serif;
+      background-color: #fdf8eb;
+      color: #0d1b2a;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      background-color: #fdf8eb;
+      height: 100px;
+      border-bottom: none;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 140px; /* adjust as needed */
+      width: auto;
+      object-fit: contain;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-subtext {
+      font-size: 0.72rem;
+      color: #0d1b2a;  /* or #0d1b2a if you're on a light background */
+      font-weight: 400;
+      white-space: nowrap;
+      margin-top: 19px;
+      margin-left: -7.5px;
+    }
+
+    nav a {
+      color: #0d1b2a;
+      margin-left: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #fbbf24;
+    }
+    
+    h1 {
+      color: #0d1b2a;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-style: normal;
+      font-family: 'Newsreader', serif;
+      margin-top: 40px;
+    }
+
+    .about-description {
+      color: #0d1b2a;
+      text-align: center;
+      max-width: 600px;
+      margin: 20px auto 60px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .team-bios {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+
+    .person {
+      text-align: center;
+      max-width: 280px;
+    }
+
+    .person img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 16px;
+    }
+
+    .person h3 {
+      margin-bottom: 4px;
+      font-size: 1.2rem;
+    }
+
+    .person .title {
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .person p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .our-team {
+      text-align: center;
+      padding: 40px 20px 80px;
+      height: 400px;
+    }
+
+    .our-team h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-style: normal;
+      font-family: 'Newsreader', serif;
+      margin-bottom: 40px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .service-box {
+      background-color: #fffaf0;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .service-box h3 {
+      color: #0d1b2a;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="header-inner">
-      <img src="assets/finclair-logo-transparent.png" alt="Finclair logo" class="logo" />
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
+    <a href="index.html" class="logo-link">
+      <img src="assets/finalskinnybluelogo.png" alt="Finclair Logo" class="logo-img" />
+      <span class="logo-subtext">Bookkeeping & Tax</span>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="about-page">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>
-        Finclair was founded with one clear goal: to make small business finances simpler, smarter, and stress-free.
-        We're a passionate team of accountants, technologists, and entrepreneurs dedicated to helping
-        everyday business owners take control of their books.
-      </p>
+  <h1>About Us</h1>
+  <p class="about-description">
+    Empowering small businesses with clear and professional financial solutions so they can thrive.
+  </p>
 
-      <h3>Our Mission</h3>
-      <p>
-        We believe that clarity in finances leads to confident decisions. That’s why we bring together
-        modern tools, expert support, and transparent communication — so you can focus on growing your business,
-        not wrestling with spreadsheets.
-      </p>
-
-      <h3>Meet the Team</h3>
-      <ul class="team-list">
-        <li class="team-member">
-          <img src="assets/chris.jpg" alt="Chris Le" class="team-photo-chris" />
-          <div>
-            <strong>Chris Le</strong> – Co-Founder, Head of Bookkeeping
-          </div>
-        </li>
-        <li class="team-member">
-          <img src="assets/andrew.jpeg" alt="Andrew Le" class="team-photo-andrew" />
-          <div>
-            <strong>Andrew Le</strong> – Co-Founder, Tax Strategy
-          </div>
-        </li>
-      </ul>
+  <div class="team-bios">
+    <div class="person">
+      <img src="assets/chris.jpg" alt="Chris">
+      <h3>Chris</h3>
+      <div class="title">COO</div>
+      <p>Chris back friends with a passion born of growth; together they’ve scaled Finclair with clarity and precision.</p>
     </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Finclair. All rights reserved.</p>
+    <div class="person">
+      <img src="assets/andrew.jpeg" alt="Andrew">
+      <h3>Andrew</h3>
+      <div class="title">CRO</div>
+      <p>With extensive payroll and compliance experience, Andrew focuses on strategy, vision, and results.</p>
     </div>
-  </footer>
+  </div>
+
+  <section class="our-team">
+    <h2>Our Team</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Bookkeeping</h3>
+        <p>Working to ensure reports, ledgers and financial reporting stay spotless.</p>
+      </div>
+      <div class="service-box">
+        <h3>Payroll</h3>
+        <p>Payroll processing and document deadlines, tax filings.</p>
+      </div>
+      <div class="service-box">
+        <h3>Tax Prep</h3>
+        <p>State and federal compliance, monitoring and filings.</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
+
