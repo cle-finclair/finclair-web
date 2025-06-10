@@ -61,15 +61,71 @@
       */
     }
 
-    nav a {
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    nav a, .dropbtn {
       color: #0d1b2a;
-      margin-left: 40px;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
+      padding: 0 4px; /* small padding to match spacing */
     }
-    nav a:hover {
-        color: #fbbf24;
+
+    nav a:hover, .dropbtn:hover {
+      color: #fbbf24;
+
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff8ed;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 6px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      color: #0d1b2a;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #fbbf24;
+      color: white;
+    }
+
+    /* Round top corners of the first option */
+    .dropdown-content a:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    /* Round bottom corners of the last option */
+    .dropdown-content a:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
     
     h1 {
@@ -183,8 +239,41 @@
       font-size: 0.85rem;
       color: #555;
     }
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 99;
+      width: 48px;
+      height: 48px;
+      border: none;
+      outline: none;
+      background-color: #fbbf24;
+      color: #0d1b2a;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #f59e0b;
+      transform: translateY(-2px);
+    } 
+
+    footer {
+      background-color: #fdf8eb;
+      color: #111827;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 0.75rem; /* smaller font */
+    }
   </style>
 </head>
+<button id="scrollTopBtn" title="Go to top">↑</button>
 <body>
   <header>
     <a href="index.html" class="logo-link">
@@ -195,7 +284,14 @@
     </a>
     <nav>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <div class="dropdown">
+        <a href="services.html" class="dropdown-btn">Services</a>
+        <div class="dropdown-content">
+          <a href="services.html#bookkeeping">Bookkeeping</a>
+          <a href="services.html#payroll">Payroll</a>
+          <a href="services.html#taxprep">Tax Prep</a>
+        </div>
+      </div>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -239,6 +335,27 @@
       </div>
     </div>
   </section>
+  <footer>
+    &copy; 2025 Finclair Group. All rights reserved.
+  </footer>
+
+  <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    // Show button after scrolling down 300px
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    // Scroll to top when clicked
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
 </body>
 </html>
 

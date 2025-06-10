@@ -12,51 +12,123 @@
       background-color: #fdf8eb;
       color: #0d1b2a;
     }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
 
-   header {
+    nav a, .dropbtn {
+      color: #fdf8eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 0 4px; /* small padding to match spacing */
+    }
+
+    nav a:hover, .dropbtn:hover {
+      color: #fbbf24;
+  
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff8ed;
+      min-width: 160px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 6px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 16px;
+      color: #0d1b2a;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #fbbf24;
+      color: white;
+    }
+
+    /* Round top corners of the first option */
+    .dropdown-content a:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    /* Round bottom corners of the last option */
+    .dropdown-content a:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 24px 48px;
       background-color: #0d1b2a;
-      height: 100px;
+      height: 50px;
       border-bottom: none;
     }
 
+    .logo-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .logo-link {
+        /*
       display: flex;
       align-items: center;
+      */
       text-decoration: none;
     }
     .logo-img {
       height: 140px; /* adjust as needed */
       width: auto;
       object-fit: contain;
+      margin-bottom: -50px;
+      margin-top: -40px;
     }
+    /*
     .logo-wrapper {
       display: flex;
       align-items: center;
       gap: 8px;
     }
+    */
     .logo-subtext {
-      font-size: 0.65rem;
+      font-size: 0.72rem;
       color: #d6d3cd;  /* or #0d1b2a if you're on a light background */
       font-weight: 400;
+      margin: 0;
+      /*
       white-space: nowrap;
       margin-top: 19px;
       margin-left: -7.5px;
+      */
     }
 
-    nav a {
-      color: #fdf8eb;
-      margin-left: 40px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-        color: #fbbf24;
-    }
+   
 
     .pricing-header {
       text-align: center;
@@ -156,12 +228,21 @@
 <body>
   <header>
     <a href="index.html" class="logo-link">
-      <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
-      <span class="logo-subtext">Bookkeeping & Tax</span>
+      <div class="logo-stack">
+        <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
+        <span class="logo-subtext">Bookkeeping & Tax</span>
+      </div>
     </a>
     <nav>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <div class="dropdown">
+        <a href="services.html" class="dropdown-btn">Services</a>
+        <div class="dropdown-content">
+          <a href="services.html#bookkeeping">Bookkeeping</a>
+          <a href="services.html#payroll">Payroll</a>
+          <a href="services.html#taxprep">Tax Prep</a>
+        </div>
+      </div>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
