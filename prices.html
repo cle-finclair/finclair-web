@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing – Finclair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Newsreader', serif;
+      background-color: #fdf8eb;
+      color: #0d1b2a;
+    }
+
+   header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      background-color: #0d1b2a;
+      height: 100px;
+      border-bottom: none;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 140px; /* adjust as needed */
+      width: auto;
+      object-fit: contain;
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-subtext {
+      font-size: 0.65rem;
+      color: #d6d3cd;  /* or #0d1b2a if you're on a light background */
+      font-weight: 400;
+      white-space: nowrap;
+      margin-top: 19px;
+      margin-left: -7.5px;
+    }
+
+    nav a {
+      color: #fdf8eb;
+      margin-left: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #fbbf24;
+    }
+
+    .pricing-header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+/*
+    .pricing-header h1 {
+      font-size: 2.8rem;
+      color: #0d1b2a;
+      margin-bottom: 20px;
+    }
+    */
+    .pricing-header h1 {
+      color: #0d1b2a;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-style: normal;
+      font-family: 'Newsreader', serif;
+      margin-top: 40px;
+    }
+
+    .pricing-header p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .pricing-plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .plan {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      width: 300px;
+      text-align: center;
+    }
+
+    .plan h3 {
+      font-size: 1.6rem;
+      color: #0d1b2a;
+      margin-bottom: 10px;
+    }
+
+    .plan .price {
+      font-size: 1.4rem;
+      color: #f59e0b;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .plan ul li {
+      margin: 10px 0;
+      font-size: 0.95rem;
+    }
+
+    .cta-button {
+      background-color: #fbbf24;
+      color: #0d1b2a;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #f59e0b;
+    }
+
+    footer {
+      background-color: #fdf8eb;
+      color: #111827;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
+      <span class="logo-subtext">Bookkeeping & Tax</span>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="pricing-header">
+    <h1>Our Pricing</h1>
+    <p>Tailored packages to meet your business’s needs and size.</p>
+  </div>
+
+  <div class="pricing-plans">
+    <div class="plan">
+      <h3>Starter</h3>
+      <div class="price">$300/mo</div>
+      <ul>
+        <li>Monthly Bookkeeping</li>
+        <li>Basic Payroll Processing</li>
+        <li>Quarterly Reports</li>
+      </ul>
+      <a href="contact.html" class="cta-button">Get Started</a>
+    </div>
+    <div class="plan">
+      <h3>Growth</h3>
+      <div class="price">$500/mo</div>
+      <ul>
+        <li>All Starter Features</li>
+        <li>Sales Tax Filings</li>
+        <li>1-on-1 Financial Consults</li>
+      </ul>
+      <a href="contact.html" class="cta-button">Get Started</a>
+    </div>
+    <div class="plan">
+      <h3>Custom</h3>
+      <div class="price>Contact Us</div>
+      <ul>
+        <li>Multi-Entity Accounting</li>
+        <li>Custom Payroll Solutions</li>
+        <li>Dedicated Account Manager</li>
+      </ul>
+      <a href="contact.html" class="cta-button">Contact Us</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Finclair Group. All rights reserved.
+  </footer>
+</body>
+</html>

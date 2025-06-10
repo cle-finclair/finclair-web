@@ -29,7 +29,7 @@
       text-decoration: none;
     }
     .logo-img {
-      height: 140px; /* adjust as needed */
+      height: 140px;
       width: auto;
       object-fit: contain;
     }
@@ -40,7 +40,7 @@
     }
     .logo-subtext {
       font-size: 0.72rem;
-      color: #0d1b2a; /* or #0d1b2a if you're on a light background */
+      color: #0d1b2a;
       font-weight: 400;
       white-space: nowrap;
       margin-top: 19px;
@@ -103,6 +103,7 @@
     .card h3 {
       font-size: 1.2rem;
       margin-bottom: 12px;
+      color: #333;
     }
 
     .card p {
@@ -110,6 +111,102 @@
       line-height: 1.5;
       color: #333;
     }
+
+    .cta-button {
+      background-color: #fbbf24;
+      color: #0d1b2a;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-top: 40px;
+    }
+
+    .cta-button:hover {
+      background-color: #f59e0b;
+    }
+
+    .service-card {
+      background-color: #fffaf0;
+      border-radius: 30px;
+      padding: 60px;
+      margin: 80px auto;
+      max-width: 1100px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .service-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+
+    .service-card h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0d1b2a;
+    }
+
+    .service-card .cards {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .service-card .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      max-width: 250px;
+      text-align: left;
+    }
+
+    .service-card .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card .card p {
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .service-card .cta-button {
+      background-color: #fbbf24;
+      color: #0d1b2a;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+       display: inline-block;
+      margin: 0 auto;
+    }
+
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease;
+    }
+
+    .card-link:hover {
+      transform: scale(1.03);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    
   </style>
 </head>
 <body>
@@ -128,34 +225,93 @@
   <section class="section-light">
     <h2>Our Services</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Bookkeeping</h3>
-        <p>Making better reports, ledgers and financial reporting.</p>
-      </div>
-      <div class="card">
-        <h3>Payroll</h3>
-        <p>Payroll processing and document-related responsibilities, tax filings.</p>
-      </div>
-      <div class="card">
-        <h3>Tax Prep</h3>
-        <p>State/local management, compliance, and filings.</p>
-      </div>
+      <a href="#bookkeeping" class="card-link">
+        <div class="card">
+          <h3>Bookkeeping</h3>
+          <p>Making better reports, ledgers and financial reporting.</p>
+        </div>
+      </a>
+      <a href="#payroll" class="card-link">
+        <div class="card">
+          <h3>Payroll</h3>
+          <p>Payroll processing and document-related responsibilities, tax filings.</p>
+        </div>
+      </a>
+      <a href="#taxprep" class="card-link">
+        <div class="card">
+          <h3>Tax Prep</h3>
+          <p>State/local management, compliance, and filings.</p>
+        </div>
+      <a>
     </div>
   </section>
 
-  <section class="section-dark">
-    <h2>Our Services</h2>
-    <p>Empowering small businesses with clear, professional financial solutions so they can thrive.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>Bookkeeping</h3>
-        <p>Historical financial cleanup, ledger recon, and financial reporting.</p>
+  <section id="bookkeeping" class="service-card">
+    <div class="service-content">
+      <div class="service-image" style="background-image: url('assets/bookkeeping-pic.jpg');"></div>
+      <h2>Bookkeeping</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Monthly Reconciliation</h3>
+          <p>We make sure your books are clean and accurate every month.</p>
+        </div>
+        <div class="card">
+          <h3>Ledger Cleanup</h3>
+          <p>Fixing and organizing past records for clarity and compliance.</p>
+        </div>
+        <div class="card">
+          <h3>Reporting</h3>
+          <p>Customized reports that help you actually understand your numbers.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Payroll</h3>
-        <p>Payroll processing, paying employees, tax filings.</p>
-      </div>
+      <a href="contact.html" class="cta-button">Contact Us</a>
     </div>
   </section>
-</body>
+
+  <section id="payroll" class="service-card">
+    <div class="service-content">
+      <div class="service-image" style="background-image: url('assets/payroll-pic.jpg');"></div>
+      <h2>Payroll</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Full-Service Payroll</h3>
+          <p>We handle all payroll calculations and disbursements.</p>
+        </div>
+        <div class="card">
+          <h3>Year-End Filings</h3>
+          <p>W-2s, 1099s, and other reports prepared and submitted on time.</p>
+        </div>
+        <div class="card">
+          <h3>Compliance Monitoring</h3>
+          <p>Stay compliant with local and federal payroll regulations.</p>
+        </div>
+      </div>
+      <a href="contact.html" class="cta-button">Contact Us</a>
+    </div>
+  </section>
+
+  <section id="taxprep" class="service-card">
+    <div class="service-content">
+      <div class="service-image" style="background-image: url('assets/tax-pic.jpg');"></div>
+      <h2>Tax Prep</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Sales Tax Filing</h3>
+          <p>We calculate, file, and pay sales tax accurately and timely.</p>
+        </div>
+        <div class="card">
+          <h3>Income Tax Preparation</h3>
+          <p>Business income tax returns prepared with accuracy.</p>
+        </div>
+        <div class="card">
+          <h3>Advisory Services</h3>
+          <p>We offer advice to reduce your tax liability legally and ethically.</p>
+        </div>
+      </div>
+      <a href="contact.html" class="cta-button">Contact Us</a>
+    </div>
+  </section>
+
+  </body>
 </html>
+
