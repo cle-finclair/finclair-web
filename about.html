@@ -19,32 +19,46 @@
       align-items: center;
       padding: 24px 48px;
       background-color: #fdf8eb;
-      height: 100px;
+      height: 50px;
       border-bottom: none;
+    }
+    .logo-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .logo-link {
+        /*
       display: flex;
       align-items: center;
+      */
       text-decoration: none;
     }
     .logo-img {
       height: 140px; /* adjust as needed */
       width: auto;
       object-fit: contain;
+      margin-bottom: -50px;
+      margin-top: -40px;
     }
+    /*
     .logo-wrapper {
       display: flex;
       align-items: center;
       gap: 8px;
     }
+    */
     .logo-subtext {
       font-size: 0.72rem;
       color: #0d1b2a;  /* or #0d1b2a if you're on a light background */
       font-weight: 400;
+      margin: 0; 
+      /*
       white-space: nowrap;
       margin-top: 19px;
       margin-left: -7.5px;
+      */
     }
 
     nav a {
@@ -90,7 +104,7 @@
       max-width: 280px;
     }
 
-    .person img {
+    .circle-img {
       width: 180px;
       height: 180px;
       border-radius: 50%;
@@ -98,7 +112,14 @@
       object-position: center top;
       margin-bottom: 16px;
     }
-
+    .circle-img-chris {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 60%;
+      margin-bottom: 16px;
+    }
     .person h3 {
       margin-bottom: 4px;
       font-size: 1.2rem;
@@ -113,6 +134,13 @@
       font-size: 0.85rem;
       line-height: 1.5;
       color: #444;
+    }
+
+    .proadvisor-badge {
+      margin-top: 12px;
+      width: 110px;
+      height: auto;
+      border-radius: 0; /* make sure it’s not rounded */
     }
 
     .our-team {
@@ -160,8 +188,10 @@
 <body>
   <header>
     <a href="index.html" class="logo-link">
-      <img src="assets/finalskinnybluelogo.png" alt="Finclair Logo" class="logo-img" />
-      <span class="logo-subtext">Bookkeeping & Tax</span>
+      <div class="logo-stack">
+        <img src="assets/finalskinnybluelogo.png" alt="Finclair Logo" class="logo-img" />
+        <span class="logo-subtext">Bookkeeping & Tax</span>
+      </div>
     </a>
     <nav>
       <a href="about.html">About</a>
@@ -176,17 +206,19 @@
   </p>
 
   <div class="team-bios">
-    <div class="person">
-      <img src="assets/chris.jpg" alt="Chris">
+    <div class="person"> 
+      <img src="assets/chris2.jpg" alt="Chris" class="circle-img-chris">
       <h3>Chris</h3>
-      <div class="title">COO</div>
+      <div class="title">Co-Founder</div>
       <p>Chris back friends with a passion born of growth; together they’ve scaled Finclair with clarity and precision.</p>
+      <img src="assets/Gold Tier Badge.png" alt="QuickBooks ProAdvisor" class="proadvisor-badge">
     </div>
     <div class="person">
-      <img src="assets/andrew.jpeg" alt="Andrew">
+      <img src="assets/andrew.jpeg" alt="Andrew" class="circle-img">
       <h3>Andrew</h3>
-      <div class="title">CRO</div>
+      <div class="title">Co-Founder</div>
       <p>With extensive payroll and compliance experience, Andrew focuses on strategy, vision, and results.</p>
+      <img src="assets/Gold Tier Badge.png" alt="QuickBooks ProAdvisor" class="proadvisor-badge">
     </div>
   </div>
 

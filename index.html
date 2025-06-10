@@ -22,7 +22,7 @@
       align-items: center;
       padding: 24px 48px;
       background-color: #0d1b2a;
-      height: 100px;
+      height: 50px;
       border-bottom: none;
     }
     
@@ -45,57 +45,57 @@
       color: #333;
     }
     .hero {
-  position: relative;
-  background-image: url('assets/home-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 240px 24px;
-  text-align: center;
-  color: #fefaf3;
-}
+      position: relative;
+      background-image: url('assets/home-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 240px 24px;
+      text-align: center;
+      color: #fefaf3;
+    }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(13, 27, 42, 0.75); /* dark overlay */
-  z-index: 1;
-  border-radius: 0;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(13, 27, 42, 0.75); /* dark overlay */
+      z-index: 1;
+      border-radius: 0;
+    }
 
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
-}
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-.hero h1 {
-  font-size: 2.8rem;
-  color: #fdf8eb;
-  margin-bottom: 20px;
-}
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #fdf8eb;
+      margin-bottom: 20px;
+    }
 
-.hero p {
-  font-size: 1.1rem;
-  color: #fdf8eb;
-  margin-bottom: 32px;
-}
+    .hero p {
+      font-size: 1.1rem;
+      color: #fdf8eb;
+      margin-bottom: 32px;
+    }
 
-.cta-button {
-  background-color: #fbbf24;
-  color: #0d1b2a;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s;
-}
+    .cta-button {
+      background-color: #fbbf24;
+      color: #0d1b2a;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
 
-.cta-button:hover {
-  background-color: #f59e0b;
-}
+    .cta-button:hover {
+      background-color: #f59e0b;
+    }
 
     .circle-img {
       width: 200px;
@@ -182,28 +182,44 @@
       text-align: left;
       color: #ffffff;
     }
+    
+    .logo-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .logo-link {
+        /*
       display: flex;
       align-items: center;
+      */
       text-decoration: none;
     }
     .logo-img {
       height: 140px; /* adjust as needed */
       width: auto;
       object-fit: contain;
+      margin-bottom: -50px;
+      margin-top: -40px;
     }
+    /*
     .logo-wrapper {
       display: flex;
       align-items: center;
       gap: 8px;
     }
+    */
     .logo-subtext {
-      font-size: 0.65rem;
+      font-size: 0.72rem;
       color: #d6d3cd;  /* or #0d1b2a if you're on a light background */
       font-weight: 400;
+      margin: 0;
+      /*
       white-space: nowrap;
       margin-top: 19px;
       margin-left: -7.5px;
+      */
     }
     
     .pricing-banner p {
@@ -229,7 +245,7 @@
     .why-finclair {
       background-color: #fdf8eb;
       color: #0d1b2a;
-      padding: 180px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
 
@@ -287,8 +303,10 @@
 <body>
   <header>
     <a href="index.html" class="logo-link">
-      <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
-      <span class="logo-subtext">Bookkeeping & Tax</span> 
+      <div class="logo-stack">
+        <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
+        <span class="logo-subtext">Bookkeeping & Tax</span> 
+      </div>
     </a>
     <nav>
       <a href="about.html">About</a>
