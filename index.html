@@ -45,38 +45,58 @@
       color: #333;
     }
     .hero {
-      background-color: #0d1b2a;
-      padding: 180px 24px;
-      text-align: center;
-      color: #fefaf3;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #fdf8eb;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #fdf8eb;
-      margin-bottom: 32px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta-button {
-      background-color: #fbbf24;
-      color: #0d1b2a;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
+  position: relative;
+  background-image: url('assets/home-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 240px 24px;
+  text-align: center;
+  color: #fefaf3;
+}
 
-    .cta-button:hover {
-      background-color: #f59e0b;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 27, 42, 0.75); /* dark overlay */
+  z-index: 1;
+  border-radius: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #fdf8eb;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #fdf8eb;
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  background-color: #fbbf24;
+  color: #0d1b2a;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f59e0b;
+}
+
     .circle-img {
       width: 200px;
       height: 200px;
@@ -276,11 +296,20 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-
+<!--
   <section class="hero">
     <h1>Clarity in Bookkeeping & Financial Services</h1>
     <p>Helping small businesses understand their numbers and make confident decisions.</p>
     <a href="contact.html" class="cta-button">Book a Consultation</a>
+  </section>
+-->
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Clarity in Bookkeeping & Financial Services</h1>
+      <p>Helping small businesses understand their numbers and make confident decisions.</p>
+      <a href="#" class="cta-button">Book a Consultation</a>
+    </div>
   </section>
 
   <section class="section">
