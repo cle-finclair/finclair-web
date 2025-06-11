@@ -296,6 +296,7 @@
     </a>
 
     <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <div class="dropdown">
         <a href="services.html" class="dropdown-btn">Services</a>
@@ -312,7 +313,13 @@
   <div class="contact-wrapper">
     <div class="contact-container">
       <h1>Contact Us</h1>
-      <form action="#" method="post">
+      <form action="https://formspree.io/f/xrbkpvad" method="post">
+        <!-- Custom Subject Line -->
+        <input type="hidden" name="_subject" value="New Message from Finclair Site!" />
+        <!-- Spam prevention (honeypot) -->
+        <input type="text" name="_gotcha" style="display:none"/>
+
+        <!-- Actual contact fields -->
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 

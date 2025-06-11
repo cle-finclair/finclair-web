@@ -300,6 +300,87 @@
       background-color: #f59e0b;
       transform: translateY(-2px);
     }
+    .read-more-btn {
+  background-color: transparent;
+  color: #0d1b2a;
+  border: 2px solid #fbbf24;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.read-more-btn:hover {
+  background-color: #fbbf24;
+  color: #0d1b2a;
+}
+    .extended-content {
+  margin-top: 60px;
+}
+
+.extended-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.extended-img {
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.extended-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.extended-text h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #0d1b2a;
+}
+
+.testimonials-section {
+  margin-top: 60px;
+}
+
+.testimonials-section h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  max-width: 300px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #777;
+}
 
     footer {
       background-color: #fdf8eb;
@@ -322,6 +403,7 @@
       </div>
     </a>
     <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <div class="dropdown">
         <a href="services.html" class="dropdown-btn">Services</a>
@@ -377,6 +459,48 @@
           <p>Customized reports that help you actually understand your numbers.</p>
         </div>
       </div>
+      <div class="extra-content" id="bookkeeping-more" style="display: none;">
+        <div class="extended-content">
+          <div class="extended-wrapper">
+            <img src="assets/arizona.jpg" alt="Arizona Local Support" class="extended-img">
+
+            <div class="extended-text">
+              <h3>Rooted in Arizona, Focused on Your Growth</h3>
+              <p>
+        At <strong>Finclair</strong>, we're proud to call Arizona our home. As Tucson locals who grew up in the world of small businesses,
+        we know firsthand how important it is to have clean books and a trustworthy partner in your corner.
+              </p>
+              <p>
+        When you work with us, you're not just getting monthly reports and reconciliations — you're also getting strategic year-end tax
+        support and proactive tax planning designed to reduce surprises and save money.
+              </p>
+              <p>
+        Whether you're in Phoenix, Tucson, or anywhere across Arizona, we'd love to connect and help you take the stress out of
+        accounting so you can focus on scaling what matters most.
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonials-section">
+            <h3>What Our Clients Say</h3>
+            <div class="testimonial-cards">
+              <div class="testimonial-card">
+                <p>“Finclair has helped us understand our finances and provide us with reports that are easy to understand.”</p>
+                <span>— Wang, Restaurant Owner in Tucson</span>
+              </div>
+              <div class="testimonial-card">
+                <p>“Having them help me with my books has really made things easier this tax season.”</p>
+                <span>— Sally, Convenience Store Owner</span>
+              </div>
+              <div class="testimonial-card">
+                <p>“They treat your business like their own. Super responsive, super clear, and just a great partner all around.”</p>
+                <span>— Amanda, Apartment complex owner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="read-more-btn" onclick="toggleReadMore('bookkeeping-more', this)">Read More</button>
       <a href="contact.html" class="cta-button">Contact Us</a>
     </div>
   </section>
@@ -399,6 +523,46 @@
           <p>Stay compliant with local and federal payroll regulations.</p>
         </div>
       </div>
+    <div class="extra-content" id="payroll-more" style="display: none;">
+      <div class="extended-content">
+  <div class="extended-wrapper">
+    <img src="assets/kitchen.jpg" alt="Payroll Services Arizona" class="extended-img">
+
+    <div class="extended-text">
+      <h3>Streamlined Payroll Backed by Local Experts</h3>
+      <p>
+        Whether you're paying a team of 2 or 200, Finclair simplifies your payroll process from start to finish. We work with platforms like <strong>Gusto</strong> and <strong>QuickBooks Payroll</strong>, and can even support your custom setup if you’re using another provider.
+      </p>
+      <p>
+        Our full-service model means we handle everything — direct deposits, withholdings, tax filings, year-end W-2s/1099s — and we do it with precision, timeliness, and a deep understanding of Arizona's payroll requirements.
+      </p>
+      <p>
+        You stay focused on growing your business. We'll make sure your people get paid and your filings are always in order.
+      </p>
+    </div>
+  </div>
+
+  <div class="testimonials-section">
+    <h3>Payroll Clients We’ve Helped</h3>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>“I used to handle payroll for all my employees and contractors - Finclair set us up with Gusto and now take care of all my payroll operations!"</p>
+        <span>— Jenny, Salon Owner</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“They have completely allowed me to offload all payroll tax filings, payments, direct deposits, etc. Huge Lifesaver.”</p>
+        <span>— Marco, Restaurant Owner</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“Finclair has allowed our small business to have it's very own payroll department. We are all super grateful!.”</p>
+        <span>— Malik, Supermarket Owner</span>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+      <button class="read-more-btn" onclick="toggleReadMore('payroll-more', this)">Read More</button>
+
       <a href="contact.html" class="cta-button">Contact Us</a>
     </div>
   </section>
@@ -421,6 +585,44 @@
           <p>We offer advice to reduce your tax liability legally and ethically.</p>
         </div>
       </div>
+      <div class="extra-content" id="tax-more" style="display: none;">
+        <div class="extended-content">
+  <div class="extended-wrapper">
+    <img src="assets/phoenix.jpg" alt="Tax Preparation Arizona" class="extended-img">
+
+    <div class="extended-text">
+      <h3>Expert Tax Services for Arizona Businesses and Individuals</h3>
+      <p>
+        Taxes don’t have to be stressful. Whether you're filing as an individual or managing business obligations like income tax and sales tax, Finclair makes it simple.
+      </p>
+      <p>
+        We’re based in Arizona and deeply familiar with local tax laws, so we can help you stay compliant while identifying opportunities to save. And since we already manage your bookkeeping, our tax prep is faster, smoother, and more accurate — no scrambling at year-end.
+      </p>
+     
+    </div>
+  </div>
+
+  <div class="testimonials-section">
+    <h3>What Clients Say About Our Tax Help</h3>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>“Finclair made my business return easy. Since they do my books, everything was organized and explained clearly.”</p>
+        <span>— Wang, Restaurant Owner</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“They helped me file taxes for me and my family — and found deductions I didn’t even know existed.”</p>
+        <span>— Daniel, Student & Waiter</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“They actually care about saving me as much on taxes as possible! Will definately be a long term client.”</p>
+        <span>— Priya, Restaurant Manager & Entrepreneur</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <button class="read-more-btn" onclick="toggleReadMore('tax-more', this)">Read More</button>
       <a href="contact.html" class="cta-button">Contact Us</a>
     </div>
   </section>
@@ -446,6 +648,16 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
+
+  <script>
+  function toggleReadMore(sectionId, button) {
+    const section = document.getElementById(sectionId);
+    const isVisible = section.style.display === "block";
+
+    section.style.display = isVisible ? "none" : "block";
+    button.textContent = isVisible ? "Read More" : "Show Less";
+  }
+</script>
 
   </body>
 </html>

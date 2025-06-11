@@ -12,6 +12,41 @@
       background-color: #fdf8eb;
       color: #0d1b2a;
     }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      background-color: #0d1b2a;
+      height: 50px;
+    }
+
+    .logo-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-link {
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 140px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: -50px;
+      margin-top: -40px;
+    }
+
+    .logo-subtext {
+      font-size: 0.72rem;
+      color: #d6d3cd;
+      font-weight: 400;
+      margin: 0;
+    }
+
     nav {
       display: flex;
       align-items: center;
@@ -23,12 +58,11 @@
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
-      padding: 0 4px; /* small padding to match spacing */
+      padding: 0 4px;
     }
 
     nav a:hover, .dropbtn:hover {
       color: #fbbf24;
-  
     }
 
     .dropdown {
@@ -63,13 +97,11 @@
       color: white;
     }
 
-    /* Round top corners of the first option */
     .dropdown-content a:first-child {
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
     }
 
-    /* Round bottom corners of the last option */
     .dropdown-content a:last-child {
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
@@ -79,75 +111,15 @@
       display: block;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 48px;
-      background-color: #0d1b2a;
-      height: 50px;
-      border-bottom: none;
-    }
-
-    .logo-stack {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo-link {
-        /*
-      display: flex;
-      align-items: center;
-      */
-      text-decoration: none;
-    }
-    .logo-img {
-      height: 140px; /* adjust as needed */
-      width: auto;
-      object-fit: contain;
-      margin-bottom: -50px;
-      margin-top: -40px;
-    }
-    /*
-    .logo-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    */
-    .logo-subtext {
-      font-size: 0.72rem;
-      color: #d6d3cd;  /* or #0d1b2a if you're on a light background */
-      font-weight: 400;
-      margin: 0;
-      /*
-      white-space: nowrap;
-      margin-top: 19px;
-      margin-left: -7.5px;
-      */
-    }
-
-   
-
     .pricing-header {
       text-align: center;
       padding: 100px 20px 60px;
     }
-/*
-    .pricing-header h1 {
-      font-size: 2.8rem;
-      color: #0d1b2a;
-      margin-bottom: 20px;
-    }
-    */
+
     .pricing-header h1 {
       color: #0d1b2a;
-      text-align: center;
       font-size: 2.5rem;
       font-weight: 300;
-      font-style: normal;
-      font-family: 'Newsreader', serif;
       margin-top: 40px;
     }
 
@@ -216,6 +188,31 @@
       background-color: #f59e0b;
     }
 
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 99;
+      width: 48px;
+      height: 48px;
+      border: none;
+      outline: none;
+      background-color: #fbbf24;
+      color: #0d1b2a;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #f59e0b;
+      transform: translateY(-2px);
+    }
+
     footer {
       background-color: #fdf8eb;
       color: #111827;
@@ -225,6 +222,7 @@
     }
   </style>
 </head>
+<button id="scrollTopBtn" title="Go to top">↑</button>
 <body>
   <header>
     <a href="index.html" class="logo-link">
@@ -234,6 +232,7 @@
       </div>
     </a>
     <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <div class="dropdown">
         <a href="services.html" class="dropdown-btn">Services</a>
@@ -249,44 +248,92 @@
 
   <div class="pricing-header">
     <h1>Our Pricing</h1>
-    <p>Tailored packages to meet your business’s needs and size.</p>
+    <p>Transparent pricing for every stage of your business journey.</p>
   </div>
 
   <div class="pricing-plans">
     <div class="plan">
       <h3>Starter</h3>
-      <div class="price">$300/mo</div>
+      <div class="price">Starting at $300/mo</div>
       <ul>
-        <li>Monthly Bookkeeping</li>
-        <li>Basic Payroll Processing</li>
-        <li>Quarterly Reports</li>
+        <li>Year-End Tax Return</li>
+        <li>Quarterly Bookkeeping Services</li>
+        <li>Packages vary based on business income</li>
       </ul>
       <a href="contact.html" class="cta-button">Get Started</a>
     </div>
+
     <div class="plan">
       <h3>Growth</h3>
-      <div class="price">$500/mo</div>
+      <div class="price">Starting at $500/mo</div>
       <ul>
-        <li>All Starter Features</li>
+        <li>Everything in Starter</li>
+        <li>Monthly Bookkeeping Services</li>
+        <li>Payroll Management</li>
         <li>Sales Tax Filings</li>
-        <li>1-on-1 Financial Consults</li>
+        <li>Proactive Tax Strategies</li>
       </ul>
-      <a href="contact.html" class="cta-button">Get Started</a>
+      <a href="contact.html" class="cta-button">Work With Us</a>
     </div>
+  </div>
+
+  <div class="pricing-header" style="padding-top: 40px;">
+    <h1>À la Carte Options</h1>
+    <p>Need just one service? No problem — mix and match to fit your needs.</p>
+  </div>
+
+  <div class="pricing-plans">
     <div class="plan">
-      <h3>Custom</h3>
-      <div class="price>Contact Us</div>
+      <h3>Monthly/Quarterly Bookkeeping</h3>
+      <div class="price">Starting at $250/mo</div>
       <ul>
-        <li>Multi-Entity Accounting</li>
-        <li>Custom Payroll Solutions</li>
-        <li>Dedicated Account Manager</li>
+        <li>Clean books, accurate reports</li>
+        <li>Perfect for staying tax-ready</li>
       </ul>
-      <a href="contact.html" class="cta-button">Contact Us</a>
+      <a href="contact.html" class="cta-button">Inquire</a>
+    </div>
+
+    <div class="plan">
+      <h3>Payroll Services</h3>
+      <div class="price">Starting at $100/mo</div>
+      <ul>
+        <li>Full-service payroll and compliance</li>
+        <li>W-2 / 1099 preparation included</li>
+      </ul>
+      <a href="contact.html" class="cta-button">Inquire</a>
+    </div>
+
+    <div class="plan">
+      <h3>Tax Preparation</h3>
+      <div class="price">Custom Quoted</div>
+      <ul>
+        <li>Individual + Business Returns</li>
+        <li>Sales Tax, State & Federal Filing</li>
+      </ul>
+      <a href="contact.html" class="cta-button">Request a Quote</a>
     </div>
   </div>
 
   <footer>
     &copy; 2025 Finclair Group. All rights reserved.
   </footer>
+
+  <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    // Show button after scrolling down 300px
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    // Scroll to top when clicked
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
 </body>
 </html>
