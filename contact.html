@@ -1,371 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us – Finclair</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finclair | Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Newsreader', serif;
-      background-color: #fdf8eb;
-    }
-
-    .contact-container {
-      background-color: #0d1b2a;
-      color: #fdf8eb;
-      max-width: 600px;
-      margin: 80px auto;
-      border-radius: 16px;
-      padding: 60px 40px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      flex: 1;
-      max-width: 500px;
-      margin-top:-10px;
-    }
-    .contact-wrapper {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 10vh 20px;
-  flex-wrap: wrap; /* in case of smaller screens */
-}
-
-
-.contact-cards {
-  flex: 1;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.contact-cards .card {
-  background-color: #fffaf0;
-  border: 1px solid #e2ddd2;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.contact-cards .card h3 {
-  margin-top: 0;
-  color: #0d1b2a;
-  font-size: 1.1rem;
-}
-
-.contact-cards .card p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-  color: #333;
-}
-   
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 48px;
-      background-color: #0d1b2a;
-      height: 50px;
-      border-bottom: none;
-    }
-
-    .logo-stack {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo-link {
-        /*
-      display: flex;
-      align-items: center;
-      */
-      text-decoration: none;
-    }
-    .logo-img {
-      height: 140px; /* adjust as needed */
-      width: auto;
-      object-fit: contain;
-      margin-bottom: -50px;
-      margin-top: -40px;
-    }
-    /*
-    .logo-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    */
-    .logo-subtext {
-      font-size: 0.72rem;
-      color: #d6d3cd;  /* or #0d1b2a if you're on a light background */
-      font-weight: 400;
-      margin: 0;
-      /*
-      white-space: nowrap;
-      margin-top: 19px;
-      margin-left: -7.5px;
-      */
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
-    nav a, .dropbtn {
-      color: #fdf8eb;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      padding: 0 4px; /* small padding to match spacing */
-    }
-
-    nav a:hover, .dropbtn:hover {
-      color: #fbbf24;
-
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #fff8ed;
-      min-width: 160px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 1000;
-      border-radius: 6px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px 16px;
-      color: #0d1b2a;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #fbbf24;
-      color: white;
-    }
-
-    /* Round top corners of the first option */
-    .dropdown-content a:first-child {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-    }
-
-    /* Round bottom corners of the last option */
-    .dropdown-content a:last-child {
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    h1 {
-      color: #fdf8eb;
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 300;
-      font-style: normal;
-      font-family: 'Newsreader', serif;
-      margin-top: 40px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      font-size: 0.95rem;
-      margin-bottom: 6px;
-      margin-top: 16px;
-    }
-
-    input[type="text"],
-    input[type="email"] {
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      background-color: #1e2e42;
-      color: #fff;
-      font-size: 1rem;
-    }
-
-    input[type="submit"] {
-      margin-top: 24px;
-      padding: 12px;
-      font-size: 1rem;
-      background-color: #fbbf24;
-      color: #0d1b2a;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #f59e0b;
-    }
-
-    .footer-note {
-      font-size: 0.75rem;
-      text-align: center;
-      margin-top: 40px;
-      color: #aaa;
-    }
-
-    textarea {
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      background-color: #1e2e42;
-      color: #fff;
-      font-size: 1rem;
-      resize: vertical;
-    }
-
-    footer {
-      background-color: #fdf8eb;
-      color: #111827;
-      padding: 5vh 20px;
-      text-align: center;
-      font-size: 0.75rem; /* smaller font */
-    }
-
-    .support-hours-card {
-  background-color: #fffaf0;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  margin-top: 40px;
-  color: #0d1b2a;
-  font-family: 'Newsreader', serif;
-  text-align: left;
-}
-
-.support-hours-card h3 {
-  margin-top: 0;
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-}
-
-.support-hours-card ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 12px;
-}
-
-.support-hours-card li {
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-}
-
-.support-hours-card p {
-  font-size: 0.85rem;
-  color: #555;
-  margin: 0;
-}
-
+    html { scroll-behavior: smooth; }
+    body, html { height: 100%; }
   </style>
 </head>
-<body>
-  <header>
-    <a href="index.html" class="logo-link">
-      <div class="logo-stack">
-        <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
-        <span class="logo-subtext">Bookkeeping & Tax</span>
-      </div>
-    </a>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <div class="dropdown">
-        <a href="services.html" class="dropdown-btn">Services</a>
-        <div class="dropdown-content">
-          <a href="services.html#bookkeeping">Bookkeeping</a>
-          <a href="services.html#payroll">Payroll</a>
-          <a href="services.html#taxprep">Tax Prep</a>
-        </div>
-      </div>
-      <a href="contact.html">Contact</a>
-      <a href="https://app.financial-cents.com/client-portal/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Client Portal
-      </a>
-    </nav>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-bold flex-shrink-0">
+          <a href="index.html" class="text-blue-600 hover:text-blue-700">
+              Finclair
+          </a>
+        </h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="services.html" class="hover:text-blue-600">Services</a>
+        <a href="about.html" class="hover:text-blue-600">About Us</a>
+        <a href="https://app.financial-cents.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">Client Portal</a>
+        <a href="contact.html" class=":text-blue-600">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="contact-wrapper">
-    <div class="contact-container">
-      <h1>Contact Us</h1>
-      <form action="https://formspree.io/f/xrbkpvad" method="post">
-        <!-- Custom Subject Line -->
-        <input type="hidden" name="_subject" value="New Message from Finclair Site!" />
-        <!-- Spam prevention (honeypot) -->
-        <input type="text" name="_gotcha" style="display:none"/>
-
-        <!-- Actual contact fields -->
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">How can we help you?</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <input type="submit" value="Send Message">
+  <!-- Main Contact Layout -->
+  <main class="flex-1 pt-24 pb-12 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+    <!-- Contact Form (Left Half) -->
+    <section class="md:w-1/2 w-full flex flex-col">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <form action="#" method="post" class="bg-gray-50 p-8 rounded-xl shadow space-y-6 max-h-[650px]">
+        <div class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium mb-1" for="name">Name</label>
+            <input id="name" name="name" type="text" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1" for="email">Email</label>
+            <input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1" for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">Send Message</button>
       </form>
-    </div>
-    
-    <div class="contact-cards">
-      <div class="card">
-        <h3>Bookkeeping & Payroll Inquiries</h3>
-        <p>Email: cle@finclairgroup.com</p>
-        <p>Chris Le, Bookkeeping Lead</p>
+    </section>
+
+    <!-- Right Half -->
+    <section class="md:w-1/2 w-full flex flex-col gap-6">
+      <!-- Map -->
+      <div class="w-full h-64 md:h-80 rounded-xl shadow overflow-hidden">
+        <iframe title="Finclair Office Map" width="100%" height="100%" class="border-0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=85710%20Tucson%20AZ&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
-      <div class="card">
-        <h3>Tax Inquiries</h3>
-        <p>Email: ale@finclairgroup.com</p>
-        <p>Andrew Le, Tax Professional</p>
-      </div> 
-      <div class="card">
-<h3>📅 Support Hours</h3>
-        <ul>
-    <li><strong>Mon – Fri:</strong> 9:00 AM – 6:00 PM</li>
-    <li><strong>Saturday:</strong> 10:00 AM – 2:00 PM</li>
-    <li><strong>Sunday:</strong> Closed</li>
-  </ul>
-  <p>We'll get back to you within 1 business day!</p>
-      </div>  
-    </div>
+      <!-- Contact Cards -->
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-6 rounded-xl shadow flex items-start gap-4">
+          <div class="bg-blue-600 text-white rounded-full h-14 w-14 flex items-center justify-center font-bold text-2xl">C</div>
+          <div>
+            <h3 class="text-lg font-semibold">Chris Le</h3>
+            <p class="text-sm text-gray-600">Co-Founder, Bookkeeping Lead</p>
+            <p class="mt-2 text-sm"><a href="mailto:chris@finclairgroup.com" class="text-blue-600 hover:underline">cle@finclairgroup.com</a></p>
+            <p class="text-sm"><a href="tel:+15205551234" class="text-blue-600 hover:underline">(520) 555-1234</a></p>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow flex items-start gap-4">
+          <div class="bg-blue-600 text-white rounded-full h-14 w-14 flex items-center justify-center font-bold text-2xl">A</div>
+          <div>
+            <h3 class="text-lg font-semibold">Andrew Le</h3>
+            <p class="text-sm text-gray-600">Co-Founder, Tax Lead</p>
+            <p class="mt-2 text-sm"><a href="mailto:andrew@finclairgroup.com" class="text-blue-600 hover:underline">ale@finclairgroup.com</a></p>
+            <p class="text-sm"><a href="tel:+15205556789" class="text-blue-600 hover:underline">(520) 555-6789</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-
-  </div>
-  <footer>
-    &copy; 2025 Finclair Group. All rights reserved.
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6 mt-auto">
+    <p class="text-sm">© 2025 Finclair Bookkeeping & Tax. All rights reserved.</p>
   </footer>
 </body>
 </html>

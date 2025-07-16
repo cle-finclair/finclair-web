@@ -1,345 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pricing – Finclair</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Newsreader', serif;
-      background-color: #fdf8eb;
-      color: #0d1b2a;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 48px;
-      background-color: #0d1b2a;
-      height: 50px;
-    }
-
-    .logo-stack {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .logo-link {
-      text-decoration: none;
-    }
-
-    .logo-img {
-      height: 140px;
-      width: auto;
-      object-fit: contain;
-      margin-bottom: -50px;
-      margin-top: -40px;
-    }
-
-    .logo-subtext {
-      font-size: 0.72rem;
-      color: #d6d3cd;
-      font-weight: 400;
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
-    nav a, .dropbtn {
-      color: #fdf8eb;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      padding: 0 4px;
-    }
-
-    nav a:hover, .dropbtn:hover {
-      color: #fbbf24;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #fff8ed;
-      min-width: 160px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 1000;
-      border-radius: 6px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 10px 16px;
-      color: #0d1b2a;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #fbbf24;
-      color: white;
-    }
-
-    .dropdown-content a:first-child {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-    }
-
-    .dropdown-content a:last-child {
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .pricing-header {
-      text-align: center;
-      padding: 100px 20px 60px;
-    }
-
-    .pricing-header h1 {
-      color: #0d1b2a;
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-top: 40px;
-    }
-
-    .pricing-header p {
-      font-size: 1.2rem;
-      color: #444;
-    }
-
-    .pricing-plans {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .plan {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 30px 24px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-      width: 300px;
-      text-align: center;
-    }
-
-    .plan h3 {
-      font-size: 1.6rem;
-      color: #0d1b2a;
-      margin-bottom: 10px;
-    }
-
-    .plan .price {
-      font-size: 1.4rem;
-      color: #f59e0b;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .plan ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .plan ul li {
-      margin: 10px 0;
-      font-size: 0.95rem;
-    }
-
-    .cta-button {
-      background-color: #fbbf24;
-      color: #0d1b2a;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #f59e0b;
-    }
-
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 99;
-      width: 48px;
-      height: 48px;
-      border: none;
-      outline: none;
-      background-color: #fbbf24;
-      color: #0d1b2a;
-      font-size: 24px;
-      font-weight: bold;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    #scrollTopBtn:hover {
-      background-color: #f59e0b;
-      transform: translateY(-2px);
-    }
-
-    footer {
-      background-color: #fdf8eb;
-      color: #111827;
-      padding: 60px 20px;
-      text-align: center;
-      font-size: 0.95rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finclair | Pricing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
-<button id="scrollTopBtn" title="Go to top">↑</button>
-<body>
-  <header>
-    <a href="index.html" class="logo-link">
-      <div class="logo-stack">
-        <img src="assets/final-skinny-logo.png" alt="Finclair Logo" class="logo-img" />
-        <span class="logo-subtext">Bookkeeping & Tax</span>
-      </div>
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <div class="dropdown">
-        <a href="services.html" class="dropdown-btn">Services</a>
-        <div class="dropdown-content">
-          <a href="services.html#bookkeeping">Bookkeeping</a>
-          <a href="services.html#payroll">Payroll</a>
-          <a href="services.html#taxprep">Tax Prep</a>
-        </div>
-      </div>
-      <a href="contact.html">Contact</a>
-      <a href="https://app.financial-cents.com/client-portal/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Client Portal
-      </a>
-    </nav>
+<body class="bg-white text-gray-900 flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-bold flex-shrink-0">
+          <a href="index.html" class="text-blue-600 hover:text-blue-700">
+              Finclair
+          </a>
+        </h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="services.html" class="hover:text-blue-600">Services</a>
+        <a href="#" class="text-blue-600 font-semibold">Pricing</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        <a href="https://app.financial-cents.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">Client Portal</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="pricing-header">
-    <h1>Our Pricing</h1>
-    <p>Transparent pricing for every stage of your business journey.</p>
-  </div>
+  <!-- Hero -->
+  <section class="pt-28 pb-16 bg-gray-50 text-center px-6">
+    <h2 class="text-4xl font-bold mb-4">Transparent Pricing</h2>
+    <p class="text-lg max-w-3xl mx-auto">Simple, flat‑rate packages—no surprise fees, ever. Pick the plan that fits your stage of growth, and scale up whenever you’re ready.</p>
+  </section>
 
-  <div class="pricing-plans">
-    <div class="plan">
-      <h3>Starter</h3>
-      <div class="price">Starting at $300/mo</div>
-      <ul>
-        <li>Year-End Tax Return</li>
-        <li>Quarterly Bookkeeping Services</li>
-        <li>Packages vary based on business income</li>
+  <!-- Pricing Cards -->
+  <section class="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    <!-- Starter -->
+    <div class="border rounded-xl shadow hover:shadow-lg transition p-8 flex flex-col">
+      <h3 class="text-2xl font-bold mb-2">Starter</h3>
+      <p class="text-gray-600 mb-6">For freelancers & solopreneurs.</p>
+      <div class="mb-6">
+        <span class="text-4xl font-bold">$300</span>
+        <span class="text-gray-600">/mo</span>
+      </div>
+      <ul class="list-disc list-inside space-y-2 flex-1">
+        <li>Up to 100 transactions/month</li>
+        <li>Payroll processing (up to 10 employees)</li>
+        <li>Monthly bookkeeping & reports</li>
+        <li>Email support</li>
       </ul>
-      <a href="contact.html" class="cta-button">Get Started</a>
+      <a href="https://buy.stripe.com/5kQ6oH8r25vl4xSd2D4sE00" class="mt-8 bg-blue-600 text-white text-center py-2 rounded-full font-semibold hover:bg-blue-700">Get Started</a>
     </div>
-
-    <div class="plan">
-      <h3>Growth</h3>
-      <div class="price">Starting at $500/mo</div>
-      <ul>
-        <li>Everything in Starter</li>
-        <li>Monthly Bookkeeping Services</li>
-        <li>Payroll Management</li>
-        <li>Sales Tax Filings</li>
-        <li>Proactive Tax Strategies</li>
+    <!-- Growth -->
+    <div class="border-2 border-blue-600 rounded-xl shadow-lg p-8 flex flex-col relative">
+      <span class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">Most Popular</span>
+      <h3 class="text-2xl font-bold mb-2">Growth</h3>
+      <p class="text-gray-600 mb-6">For growing teams & storefronts.</p>
+      <div class="mb-6">
+        <span class="text-4xl font-bold">$500</span>
+        <span class="text-gray-600">/mo</span>
+      </div>
+      <ul class="list-disc list-inside space-y-2 flex-1">
+        <li>Up to 300 transactions/month</li>
+        <li>Bi‑weekly bookkeeping</li>
+        <li>Payroll processing (up to 10 employees)</li>
+        <li>Quarterly tax estimates</li>
+        <li>Priority email & phone support</li>
       </ul>
-      <a href="contact.html" class="cta-button">Work With Us</a>
+      <a href="https://buy.stripe.com/28E14n0YAbTJfcw2nZ4sE01" class="mt-8 bg-blue-600 text-white text-center py-2 rounded-full font-semibold hover:bg-blue-700">Choose Plan</a>
     </div>
-  </div>
-
-  <div class="pricing-header" style="padding-top: 40px;">
-    <h1>À la Carte Options</h1>
-    <p>Need just one service? No problem — mix and match to fit your needs.</p>
-  </div>
-
-  <div class="pricing-plans">
-    <div class="plan">
-      <h3>Monthly/Quarterly Bookkeeping</h3>
-      <div class="price">Starting at $250/mo</div>
-      <ul>
-        <li>Clean books, accurate reports</li>
-        <li>Perfect for staying tax-ready</li>
+    <!-- Scale -->
+    <div class="border rounded-xl shadow hover:shadow-lg transition p-8 flex flex-col">
+      <h3 class="text-2xl font-bold mb-2">Scale</h3>
+      <p class="text-gray-600 mb-6">For multi‑location or high‑volume businesses.</p>
+      <div class="mb-6">
+        <span class="text-4xl font-bold">Custom</span>
+      </div>
+      <ul class="list-disc list-inside space-y-2 flex-1">
+        <li>Unlimited transactions</li>
+        <li>Weekly/monthly bookkeeping & KPI dashboard</li>
+        <li>Full‑service payroll (unlimited employees)</li>
+        <li>Annual tax strategy & filing included</li>
       </ul>
-      <a href="contact.html" class="cta-button">Inquire</a>
+      <a href="contact.html" class="mt-8 bg-blue-600 text-white text-center py-2 rounded-full font-semibold hover:bg-blue-700">Request Quote</a>
     </div>
+  </section>
 
-    <div class="plan">
-      <h3>Payroll Services</h3>
-      <div class="price">Starting at $100/mo</div>
-      <ul>
-        <li>Full-service payroll and compliance</li>
-        <li>W-2 / 1099 preparation included</li>
+  <!-- Add‑ons -->
+  <section class="bg-gray-100 py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold mb-6 text-center">Add‑On Services</h3>
+      <ul class="grid sm:grid-cols-2 gap-6 text-lg list-disc list-inside">
+        <li>Catch‑up Bookkeeping · from $75/mo</li>
+        <li>Sales Tax Filings · from $50/mo</li>
+        <li>1099 Preparation · $10/form</li>
+        <li>Entity Formation Consulting · $400 one‑time</li>
       </ul>
-      <a href="contact.html" class="cta-button">Inquire</a>
     </div>
+  </section>
 
-    <div class="plan">
-      <h3>Tax Preparation</h3>
-      <div class="price">Custom Quoted</div>
-      <ul>
-        <li>Individual + Business Returns</li>
-        <li>Sales Tax, State & Federal Filing</li>
-      </ul>
-      <a href="contact.html" class="cta-button">Request a Quote</a>
-    </div>
-  </div>
+  <!-- CTA -->
+  <section class="bg-blue-600 text-white text-center py-10 px-6">
+    <h3 class="text-2xl font-bold mb-6">Unsure which plan fits? Let’s chat.</h3>
+    <a href="contact.html" class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100">Schedule a Free Consultation</a>
+  </section>
 
-  <footer>
-    &copy; 2025 Finclair Group. All rights reserved.
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6 mt-auto">
+    <p class="text-sm">© 2025 Finclair Bookkeeping & Tax. All rights reserved.</p>
   </footer>
-
-  <script>
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    // Show button after scrolling down 300px
-    window.onscroll = function () {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
-    };
-
-    // Scroll to top when clicked
-    scrollTopBtn.onclick = function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  </script>
 </body>
 </html>
+
