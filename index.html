@@ -48,6 +48,29 @@
         opacity: 1;
         transform: none !important;
       }
+
+      @media (max-width: 640px) {
+
+        /* Make every page‐section shorter & tighter */
+        .page-section            { padding: 2rem 1rem; min-height: auto; }
+
+        /* Hero: shorter height & less side padding */
+        .hero-mobile             { min-height: 70vh !important; padding-left: 1rem; padding-right: 1rem; }
+
+        /* Services grid: stack 1-up and shrink gaps */
+        #services .grid          { grid-template-columns: 1fr !important; gap: 1rem !important; }
+
+        /* Cards: bump font a bit smaller so blocks don’t stretch */
+        .card-body p             { font-size: 0.95rem; }
+
+        /* Hide wave divider or make it tiny */
+        .wave-divider            { height: 3rem !important; }
+
+        /* Navbar: hide links & show hamburger */
+        .nav-desktop             { display: none !important; }
+        .nav-mobile              { display: inline-block !important; }
+        
+      } 
     </style>
   </head>
 
