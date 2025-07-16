@@ -35,7 +35,7 @@
     <!-- Contact Form (Left Half) -->
     <section class="md:w-1/2 w-full flex flex-col">
       <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-      <form action="#" method="post" class="bg-gray-50 p-8 rounded-xl shadow space-y-6 max-h-[650px]">
+      <form action="https://formspree.io/f/xrbkpvad" method="post" class="bg-gray-50 p-8 rounded-xl shadow space-y-6 max-h-[650px]">
         <div class="space-y-6">
           <div>
             <label class="block text-sm font-medium mb-1" for="name">Name</label>
@@ -46,10 +46,17 @@
             <input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
           </div>
           <div>
-            <label class="block text-sm font-medium mb-1" for="message">Message</label>
+            <label class="block text-sm font-medium mb-1" for="message">How can we help you?</label>
             <textarea id="message" name="message" rows="6" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"></textarea>
           </div>
         </div>
+
+        <!-- simple spam trap (invisible to humans) -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <!-- optional redirect after submit -->
+        <input type="hidden" name="_next" value="https://finclairgroup.com/thanks.html" />
+
         <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">Send Message</button>
       </form>
     </section>
