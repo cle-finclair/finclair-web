@@ -9,6 +9,19 @@
   <style>
     html { scroll-behavior: smooth; }
     .page-section { min-height: 50vh; }
+
+    /* Scroll‑triggered animations */
+    .fade-in-left,.fade-in-right,.fade-up,.fade-down,.skew-reveal{opacity:0;transition:opacity .8s ease-out,transform .8s ease-out}
+    .fade-in-left{transform:translateX(-60px)}.fade-in-right{transform:translateX(60px)}.fade-up{transform:translateY(40px)}.fade-down{transform:translateY(-40px)}.skew-reveal{transform:skewX(-8deg)}.show{opacity:1;transform:none!important}
+
+    /* Mobile tweaks */
+    @media (max-width:640px){
+      .page-section{padding:2rem 1rem;min-height:auto}
+      .hero-mobile{min-height:70vh!important;padding-left:1rem;padding-right:1rem}
+      #services .grid{grid-template-columns:1fr!important;gap:1rem!important}
+      .wave-divider{height:3rem!important}
+    }
+
   </style>
 </head>
 <body class="bg-white text-gray-900 flex flex-col min-h-screen">
@@ -16,28 +29,46 @@
     <header class="fixed inset-x-0 top-0 bg-white shadow z-50">
       <div class="flex items-center justify-between px-6 py-4">
         <h1 class="text-2xl font-bold flex-shrink-0">
-          <a href="index.html" class="text-blue-600 hover:text-blue-700">
-              Finclair
-          </a>
+          <a href="index.html" class="text-blue-600 hover:text-blue-700">Finclair</a>
         </h1>
-        <nav class="space-x-6 text-sm font-medium">
-          <a href="index.html" class="hover:text-blue-600">Home</a>
-          <a href="services.html" class="text-blue-600">Services</a>
-          <a href="about.html" class="hover:text-blue-600">About&nbsp;Us</a>
-          <a
-            href="https://app.financial-cents.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-blue-600"
-            >Client&nbsp;Portal</a
-          >
-          <a href="contact.html" class="hover:text-blue-600">Contact</a>
-        </nav>
-      </div>
-    </header>
 
+        <!-- hamburger (shows <640 px) -->
+        <button id="navToggle" class="md:hidden text-blue-600 focus:outline-none" aria-label="Toggle navigation">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- desktop nav -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="index.html"      class="hover:text-blue-600">Home</a>
+          <a href="services.html"   class="hover:text-blue-600">Services</a>
+          <a href="about.html"      class="hover:text-blue-600">About&nbsp;Us</a>
+          <a href="contact.html"    class="hover:text-blue-600">Contact</a>
+          <a href="https://app.financial-cents.com" target="_blank" rel="noopener" class="hover:text-blue-600">Client&nbsp;Portal</a>
+        </nav>
+    </div>
+
+    <!-- mobile dropdown -->
+    <nav id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+        <a href="index.html"    class="block px-6 py-3 border-b border-gray-200">Home</a>
+        <a href="services.html" class="block px-6 py-3 border-b border-gray-200">Services</a>
+        <a href="about.html"    class="block px-6 py-3 border-b border-gray-200">About&nbsp;Us</a>
+        <a href="contact.html"  class="block px-6 py-3 border-b border-gray-200">Contact</a>
+        <a href="https://app.financial-cents.com" target="_blank" rel="noopener" class="block px-6 py-3">Client&nbsp;Portal</a>
+      </nav>
+    </header>
   <!-- Our Core Services Selector with background image -->
-  <section class="page-section relative flex flex-col items-center justify-center text-center pt-32 pb-32 overflow-hidden">
+  <section class="
+    page-section
+    mt-16            
+    md:mt-0          
+    pt-10            
+    md:pt-24
+    pb-16 md:pb-24
+    px-4
+    relative flex flex-col items-center text-center
+  ">
     <img src="/assets/tax-pic.jpg" alt="Services Background" class="absolute inset-0 w-full h-full object-cover opacity-30 z-0">
     <div class="relative z-10 max-w-4xl px-6">
       <h2 class="text-4xl font-bold mb-8 text-black">Our Core Services</h2>
@@ -123,6 +154,12 @@
   <footer class="bg-blue-600 text-white text-center py-6 mt-auto">
     <p class="text-sm">© 2025 Finclair Bookkeeping & Tax. All rights reserved.</p>
   </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
 
