@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicon2.png" sizes="32x32" />
+  <link rel="icon" href="/assets/favicon2.png?v=2" type="image/png" sizes="32x32" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finclair | Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body, html { height: 100%; }
+
+    /* ——— MOBILE OVERRIDES ——— */
+    @media (max-width:640px){
+      .page-section{padding:2rem 1rem;min-height:auto}
+      .hero-mobile{min-height:70vh!important;padding-left:1rem;padding-right:1rem}
+      #services .grid{grid-template-columns:1fr!important;gap:1rem!important}
+      .wave-divider{height:3rem!important}        /* only if you use the wave */
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-bold flex-shrink-0">
+          <a href="index/" class="text-blue-600 hover:text-blue-700">
+              Finclair
+          </a>
+        </h1>
+      <!-- hamburger (shows <640 px) -->
+      <button id="navToggle" class="md:hidden text-blue-600 focus:outline-none" aria-label="Toggle navigation">
+        <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- desktop nav -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="index/"      class="hover:text-blue-600">Home</a>
+        <a href="services/"   class="hover:text-blue-600">Services</a>
+        <a href="about/"      class="hover:text-blue-600">About&nbsp;Us</a>
+        <a href="contact/"    class="hover:text-blue-600">Contact</a>
+        <a href="https://app.financial-cents.com/client-portal" target="_blank" rel="noopener" class="hover:text-blue-600">Client&nbsp;Portal</a>
+      </nav>
+    </div>
+
+    <!-- mobile dropdown -->
+    <nav id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+      <a href="index/"    class="block px-6 py-3 border-b border-gray-200">Home</a>
+      <a href="services/" class="block px-6 py-3 border-b border-gray-200">Services</a>
+      <a href="about/"    class="block px-6 py-3 border-b border-gray-200">About&nbsp;Us</a>
+      <a href="contact/"  class="block px-6 py-3 border-b border-gray-200">Contact</a>
+      <a href="https://app.financial-cents.com/client-portal" target="_blank" rel="noopener" class="block px-6 py-3">Client&nbsp;Portal</a>
+    </nav>
+  </header>
+
+  <!-- Main Contact Layout -->
+  <main class="flex-1 pt-24 pb-12 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+    <!-- Contact Form (Left Half) -->
+    <section class="md:w-1/2 w-full flex flex-col">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <form action="https://formspree.io/f/xrbkpvad" method="post" class="bg-gray-50 p-8 rounded-xl shadow space-y-6 max-h-[650px]">
+        <div class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium mb-1" for="name">Name</label>
+            <input id="name" name="name" type="text" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1" for="email">Email</label>
+            <input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1" for="message">How can we help you?</label>
+            <textarea id="message" name="message" rows="6" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"></textarea>
+          </div>
+        </div>
+
+        <!-- simple spam trap (invisible to humans) -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <!-- optional redirect after submit -->
+        <input type="hidden" name="_next" value="https://finclairgroup.com/thanks/" />
+
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Right Half -->
+    <section class="md:w-1/2 w-full flex flex-col gap-6">
+      <!-- Map -->
+      <div class="w-full h-64 md:h-80 rounded-xl shadow overflow-hidden">
+        <iframe title="Finclair Office Map" width="100%" height="100%" class="border-0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=85710%20Tucson%20AZ&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+      <!-- Contact Cards -->
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-6 rounded-xl shadow flex items-start gap-4">
+          <div class="bg-blue-600 text-white rounded-full h-14 w-14 flex items-center justify-center font-bold text-2xl">C</div>
+          <div>
+            <h3 class="text-lg font-semibold">Chris Le</h3>
+            <p class="text-sm text-gray-600">Co-Founder, Bookkeeping Lead</p>
+            <p class="mt-2 text-sm"><a href="mailto:cle@finclairgroup.com" class="text-blue-600 hover:underline">cle@finclairgroup.com</a></p>
+            <p class="text-sm"><a href="tel:+15204715960" class="text-blue-600 hover:underline">(520) 471-5960</a></p>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow flex items-start gap-4">
+          <div class="bg-blue-600 text-white rounded-full h-14 w-14 flex items-center justify-center font-bold text-2xl">A</div>
+          <div>
+            <h3 class="text-lg font-semibold">Andrew Le</h3>
+            <p class="text-sm text-gray-600">Co-Founder, Tax Lead</p>
+            <p class="mt-2 text-sm"><a href="mailto:ale@finclairgroup.com" class="text-blue-600 hover:underline">ale@finclairgroup.com</a></p>
+            <p class="text-sm"><a href="tel:+15209549472" class="text-blue-600 hover:underline">(520) 954-9472</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6 mt-auto">
+    <p class="text-sm">© 2025 Finclair Bookkeeping & Tax. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
+
