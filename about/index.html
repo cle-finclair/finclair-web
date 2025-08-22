@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/assets/favicon2.png" sizes="32x32" />
+  <link rel="icon" href="/assets/favicon2.png?v=2" type="image/png" sizes="32x32" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finclair | About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .page-section { min-height: 70vh; } 
+
+    /* ——— MOBILE OVERRIDES ——— */
+    @media (max-width:640px){
+      .page-section{padding:2rem 1rem;min-height:auto}
+      .hero-mobile{min-height:70vh!important;padding-left:1rem;padding-right:1rem}
+      #services .grid{grid-template-columns:1fr!important;gap:1rem!important}
+      .wave-divider{height:3rem!important}        /* only if you use the wave */
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-bold flex-shrink-0">
+        <a href="index/" class="text-blue-600 hover:text-blue-700">
+              Finclair
+        </a>
+      </h1>
+      <!-- hamburger (shows <640 px) -->
+      <button id="navToggle" class="md:hidden text-blue-600 focus:outline-none" aria-label="Toggle navigation">
+        <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- desktop nav -->
+      <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="index/"      class="hover:text-blue-600">Home</a>
+        <a href="services/"   class="hover:text-blue-600">Services</a>
+        <a href="about/"      class="hover:text-blue-600">About&nbsp;Us</a>
+        <a href="contact/"    class="hover:text-blue-600">Contact</a>
+        <a href="https://app.financial-cents.com/client-portal" target="_blank" rel="noopener" class="hover:text-blue-600">Client&nbsp;Portal</a>
+      </nav>
+    </div>
+
+    <!-- mobile dropdown -->
+    <nav id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
+      <a href="index/"    class="block px-6 py-3 border-b border-gray-200">Home</a>
+      <a href="services/" class="block px-6 py-3 border-b border-gray-200">Services</a>
+      <a href="about/"    class="block px-6 py-3 border-b border-gray-200">About&nbsp;Us</a>
+      <a href="contact/"  class="block px-6 py-3 border-b border-gray-200">Contact</a>
+      <a href="https://app.financial-cents.com/client-portal" target="_blank" rel="noopener" class="block px-6 py-3">Client&nbsp;Portal</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+<section class="relative flex flex-col items-center justify-center justify-start text-center min-h-screen  px-6 pt-24 overflow-hidden">
+  <!-- background image with 40 % opacity -->
+  <img src="/assets/arizona.2.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover object-top opacity-60 z-0">
+    <div class="relative z-10 max-w-4xl fade-in-left">
+
+  <!-- black overlay: change /50 to /60 /70 etc. -->
+  <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+  <!-- text block -->
+  <div class="relative z-10 max-w-4xl">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-black">About Finclair</h2>
+    <p class="text-lg md:text-xl text-black">
+      At Finclair, our mission is simple: empower business owners by giving them
+      clarity and confidence in their finances.
+    </p>
+  </div>
+</section>
+
+  <!-- Our Story -->
+  <section class="py-16 px-6 max-w-5xl mx-auto">
+    <h3 class="text-3xl font-bold mb-6 text-center">Our Story</h3>
+    <p class="leading-relaxed text-lg">We’re Chris and Andrew—Tucson brothers who grew up helping our parents run local restaurants. After years of witnessing late-night number crunching and tax-season stress, we launched Finclair to give small-business owners the clean books and worry-free payroll we always wished our family had. You focus on serving customers and growing your brand; we’ll handle the bookkeeping, payroll, and taxes.</p>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="bg-gray-100 py-16 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h3 class="text-3xl font-bold mb-4">Our Mission</h3>
+        <p class="text-lg">To empower small businesses with accurate data and expert guidance, turning finances from a stress point into a strategic asset.</p>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold mb-4 md:mt-0 mt-8">Core Values</h3>
+        <ul class="list-disc list-inside space-y-2 text-lg">
+          <li><strong>Clarity:</strong> Clear reports and straightforward pricing.</li>
+          <li><strong>Integrity:</strong> We treat your business like our own.</li>
+          <li><strong>Innovation:</strong> Leveraging tech to save you time and money.</li>
+          <li><strong>Partnership:</strong> Your success is our success.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team -->
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold mb-12 text-center">Meet the Team</h3>
+    <div class="grid sm:grid-cols-2 gap-10">
+      <!-- Chris -->
+<div class="flex items-start gap-6 bg-gray-50 p-8 rounded-xl shadow">
+  <!-- small round avatar -->
+  <button
+    class="h-28 w-28 rounded-full overflow-hidden focus:outline-none"
+    onclick="openAvatar('/assets/chris2.jpg', 'Chris Le')"
+  >
+    <img
+      src="/assets/chris2.jpg"        
+      alt="Chris Le"
+      class="h-full w-full object-cover"
+    />
+  </button>
+
+  <!-- text -->
+  <div>
+    <h4 class="text-xl font-semibold mb-1">Chris Le</h4>
+    <p class="text-sm text-gray-600 mb-3">Co-Founder &amp; Bookkeeping Lead</p>
+    <p class="text-lg leading-relaxed">
+      Chris brings a software-engineering mindset to bookkeeping, building
+      efficient workflows that keep every transaction in check.
+    </p>
+  </div>
+</div>
+      <!-- Andrew -->
+      <div class="flex items-start gap-6 bg-gray-50 p-8 rounded-xl shadow">
+        <button
+        class="h-28 w-28 rounded-full overflow-hidden focus:outline-none"
+        onclick="openAvatar('/assets/andrew2.jpg', 'Andrew Le')"
+        >
+            <img
+            src="/assets/andrew2.jpg"        
+            alt="Andrew Le"
+            class="h-full w-full object-cover"
+            />
+        </button> 
+        <div>
+          <h4 class="text-xl font-semibold mb-1">Andrew Le</h4>
+          <p class="text-sm text-gray-600 mb-3">Co‑Founder & Tax Lead</p>
+          <p class="text-lg leading-relaxed">Andrew leverages years of public‑accounting experience to craft proactive tax strategies that minimize liability and fuel growth.</p>
+        </div>
+      </div>
+      <!-- Thuy -->
+<div class="relative flex items-start gap-6 bg-gray-50 p-8 rounded-xl shadow">
+  <!-- Gusto badge -->
+  <img
+    src="/assets/gusto-badge.png"
+    alt="Gusto Badge"
+    class="absolute top-2 right-2 h-16 w-auto z-30"
+  />
+
+  <!-- avatar (swap for photo if you have one) -->
+  <div
+    class="bg-blue-600 text-white h-20 w-20 flex items-center justify-center rounded-full text-3xl font-bold"
+  >
+    T
+  </div>
+
+  <!-- text -->
+  <div>
+    <h4 class="text-xl font-semibold mb-1">Thuy</h4>
+    <p class="text-sm text-gray-600 mb-3">Payroll Specialist</p>
+    <p class="text-lg leading-relaxed">
+      Thuy oversees payroll processing, ensuring every employee is paid accurately
+      and on time while keeping Finclair compliant with state and federal
+      regulations.
+    </p>
+  </div>
+</div>
+      <!-- Gam -->
+<div class="relative flex items-start gap-6 bg-gray-50 p-8 rounded-xl shadow">
+  <!-- QBO badge -->
+  <img
+    src="/assets/Gold Tier Badge.png"          
+    alt="QuickBooks ProAdvisor"
+    class="absolute top-2 right-2 h-16 w-auto z-30"
+  />
+
+  <!-- avatar (or round photo) -->
+  <div class="bg-blue-600 text-white h-24 w-24 flex items-center justify-center rounded-full text-3xl font-bold">
+    G
+  </div>
+
+  <!-- text -->
+  <div>
+    <h4 class="text-xl font-semibold mb-1">Gam</h4>
+    <p class="text-sm text-gray-600 mb-3">Bookkeeper</p>
+    <p class="text-lg leading-relaxed">
+      Gam brings meticulous attention to detail to the day-to-day posting and
+      reconciliation work, making sure client books are spotless and up to date.
+    </p>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smaller CTA -->
+  <section class="bg-blue-600 text-white text-center py-10 px-6 relative">
+    <a href="https://www.facebook.com/profile.php?id=61577577565159" target="_blank" aria-label="Finclair Facebook Page" class="absolute top-4 right-6 hover:opacity-80">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 fill-current text-white">
+        <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.325 24H12v-9.294H9.097v-3.622H12V8.413c0-2.877 1.762-4.443 4.338-4.443 1.233 0 2.292.092 2.598.133v3.014l-1.783.001c-1.4 0-1.671.668-1.671 1.648v2.158h3.343l-.436 3.622h-2.907V24h5.698C23.407 24 24 23.406 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+      </svg>
+    </a>
+    <h3 class="text-2xl font-bold mb-6">Ready to partner with a finance team that has your back?</h3>
+    <a href="contact/" class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6 mt-auto">
+    <p class="text-sm">© 2025 Finclair Bookkeeping & Tax. All rights reserved.</p>
+  </footer>
+  <!-- avatar modal -->
+  <div
+    id="avatarModal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/50"
+    onclick="closeAvatar(event)"
+  >
+    <div
+      id="avatarCard"
+      class="relative bg-white rounded-xl shadow-lg p-4 max-w-xs sm:max-w-sm w-full"
+    >
+      <!-- close button -->
+      <button
+        class="absolute -top-3 -right-3 bg-white rounded-full shadow p-1 text-gray-500 hover:text-gray-700"
+        onclick="closeAvatar(event)"
+        aria-label="Close photo"
+      >
+        &#10005;
+      </button>
+
+      <!-- full photo -->
+      <img
+        id="avatarImg"
+        src=""
+        alt=""
+        class="w-full h-auto rounded-lg object-cover"
+      />
+    </div>
+  </div>
+
+  <script>
+    // open with chosen src & alt
+    function openAvatar(src, alt) {
+      document.getElementById('avatarImg').src = src;
+      document.getElementById('avatarImg').alt = alt;
+      document.getElementById('avatarModal').classList.remove('hidden');
+    }
+
+    // close when backdrop OR × is clicked
+    function closeAvatar(e) {
+      // allow clicks inside the white card without closing
+      if (e.target.id === 'avatarModal' || e.currentTarget.tagName === 'BUTTON') {
+        document.getElementById('avatarModal').classList.add('hidden');
+      }
+    }
+  </script>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+
+</body>
+</html>
+
