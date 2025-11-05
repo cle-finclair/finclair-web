@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="overflow-x-hidden">
   <head>
-    <link rel="icon" type="image/png" href="/assets/favicon2.png" sizes="32x32" />
-    <link rel="icon" href="/assets/favicon2.png?v=2" type="image/png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" sizes="32x32" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Finclair Bookkeeping &amp; Tax</title>
@@ -37,8 +36,10 @@
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 9999px;
-  background: #2563EB; /* Tailwind blue-600 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  background-color: #000000;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.65);
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.25), 0 8px 18px rgba(0,0,0,0.35);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +47,6 @@
   z-index: 60;
   opacity: 0;
   pointer-events: none;
-  border: none;
 }
 
 #backToTop.is-visible {
@@ -62,41 +62,41 @@
     </style>
   </head>
 
-  <body class="bg-white text-gray-900 overflow-x-hidden">
+  <body class="bg-blue text-gray-900 overflow-x-hidden">
     <!-- NAVBAR -->
-    <header class="fixed inset-x-0 top-0 bg-white shadow z-50">
-      <div class="flex items-center justify-between px-6 py-4">
-        <h1 class="text-2xl font-bold flex-shrink-0">
-          <a href="index.html" class="text-blue-600 hover:text-blue-700">
-              Finclair
-          </a>
-        </h1>
+    <header class="fixed inset-x-0 top-0 bg-black shadow z-50 h-16 flex items-center">
+      <div class="flex items-center justify-between w-full px-6">
+        <a href="/">
+            <img src="/assets/svg.svg" alt="Finclair Logo" class="h-14 w-auto">
+        </a>
 
         <!-- Mobile hamburger -->
-        <button id="navToggle" class="md:hidden text-blue-600 focus:outline-none" aria-label="Toggle navigation">
-          <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <button id="navToggle" class="md:hidden text-white-600 focus:outline-none" aria-label="Toggle navigation">
+          <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
 
         <!-- Desktop nav -->
         <nav class="hidden md:flex nav-desktop space-x-6 text-sm font-medium">
-          <a href="#" class="hover:text-blue-600">Home</a>
-          <a href="services.html" class="hover:text-blue-600">Services</a>
-          <a href="about.html" class="hover:text-blue-600">About&nbsp;Us</a>
+          <a href="#" class="text-white hover:text-gray-300 transition">Home</a>
+          <a href="services.html" class="text-white hover:text-gray-300 transition">Services</a>
+          <a href="prices.html" class="text-white hover:text-gray-300 transition">Pricing</a>
+          <a href="about.html" class="text-white hover:text-gray-300 transition">About&nbsp;Us</a>
           <a
             href="https://finclairgroup.clientportal.com/"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-blue-600"
+            class="text-white hover:text-gray-300 transition"
             >Client&nbsp;Portal</a>
-          <a href="contact.html" class="hover:text-blue-600">Contact</a>
+          <a href="contact.html" class="text-white hover:text-gray-300 transition">Contact</a>
         </nav>
       </div>
       <!-- Mobile slide-down menu -->
       <nav id="mobileMenu" class="md:hidden hidden bg-white shadow-lg">
         <a href="#" class="block px-6 py-3 border-b border-gray-200">Home</a>
         <a href="services.html" class="block px-6 py-3 border-b border-gray-200">Services</a>
+        <a href="prices.html" class="block px-6 py-3 border-b border-gray-200">Pricing</a>
         <a href="about.html" class="block px-6 py-3 border-b border-gray-200">About&nbsp;Us</a>
         <a href="https://finclairgroup.clientportal.com/" target="_blank" rel="noopener" class="block px-6 py-3 border-b border-gray-200">Client&nbsp;Portal</a>
         <a href="contact.html" class="block px-6 py-3">Contact</a>
@@ -105,11 +105,13 @@
 
     <!-- HERO -->
     <section class="relative flex flex-col items-center justify-center min-h-screen pt-24 px-6 text-center bg-gray-900 text-white hero-mobile">
-      <img src="/assets/home2.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover object-top opacity-20 z-0" />
+      <img src="/assets/cover1.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover object-top opacity-20 z-0" />
       <div class="relative z-10 max-w-4xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Financial Clarity for Growing Businesses</h1>
-        <p class="text-lg md:text-xl mb-8">We help small-business owners stay organized, compliant, and stress-free — so you can focus on what matters most.</p>
-        <a href="contact.html" class="bg-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-700">Get a Free Consultation</a>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Financial Clarity Starts Here</h1>
+        <p class="text-lg md:text-xl mb-8">We provide accounting solutions to business owners so you can focus on what matters most.</p>
+        <a href="contact.html" class="bg-black hover:bg-gray-900 px-6 py-3 rounded-full font-semibold text-white transition">
+            Get a free consultation
+        </a>
       </div>
     </section>
 
@@ -137,13 +139,13 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="prices.html" class="text-blue-600 font-semibold hover:underline">→ See Our Pricing</a>
+        <a href="prices.html" class="text-black font-semibold hover:underline">→ See Our Pricing</a>
       </div>
     </section>
 
     <!-- WAVE DIVIDER -->
     <div class="relative w-full h-40 overflow-hidden leading-none">
-      <svg class="absolute inset-0 w-full h-full text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg class="absolute inset-0 w-full h-full text-black-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
         <path fill="currentColor" d="M0,192L60,186.7C120,181,240,171,360,170.7C480,171,600,181,720,176C840,171,960,149,1080,133.3C1200,117,1320,107,1380,101.3L1440,96V320H0Z"/>
       </svg>
     </div>
@@ -191,10 +193,12 @@
     <div class="flex flex-col md:flex-row items-stretch justify-center gap-6 mx-auto">
       <!-- Card 1 -->
       <div class="relative md:w-72 bg-white shadow-lg rounded-xl p-8 text-center border border-gray-100">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-blue-600"
-             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M3 9h18M4 9v10.5A1.5 1.5 0 005.5 21h13a1.5 1.5 0 001.5-1.5V9m-13 8.5v-3a1 1 0 011-1h6a1 1 0 011 1v3"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-black"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.5 9H19.5" />
+          <path d="M6 9V20H18V9" />
+          <path d="M9.5 20V15.5H14.5V20" />
+          <path d="M6.5 4.5H17.5L19 9H5z" fill="currentColor" stroke="none" />
         </svg>
         <h4 class="mt-4 font-semibold text-lg">Built for Small Businesses</h4>
         <p class="mt-2 text-sm leading-relaxed">
@@ -211,10 +215,10 @@
 
       <!-- Card 2 -->
       <div class="relative md:w-72 bg-white shadow-lg rounded-xl p-8 text-center border border-gray-100">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-blue-600"
-             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7">
-          <circle cx="12" cy="12" r="8"/>
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8M8 12h8"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-black"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="6" />
+          <path d="M15.5 15.5L20 20" />
         </svg>
         <h4 class="mt-4 font-semibold text-lg">Clear Pricing, Clear Communication</h4>
         <p class="mt-2 text-sm leading-relaxed">
@@ -230,10 +234,14 @@
 
       <!-- Card 3 -->
       <div class="md:w-72 bg-white shadow-lg rounded-xl p-8 text-center border border-gray-100">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-blue-600"
-             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M16 14a4 4 0 10-8 0v4m8 0H8m4-10a3 3 0 100-6 3 3 0 000 6z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-black"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="3" />
+          <path d="M7 20v-1.4A4.6 4.6 0 0 1 11.6 14h0.8A4.6 4.6 0 0 1 17 18.6V20" />
+          <circle cx="6" cy="12.5" r="2.5" />
+          <circle cx="18" cy="12.5" r="2.5" />
+          <path d="M3.5 20v-.8A3.7 3.7 0 0 1 7.2 15.5" />
+          <path d="M20.5 20v-.8A3.7 3.7 0 0 0 16.8 15.5" />
         </svg>
         <h4 class="mt-4 font-semibold text-lg">Tech-Forward, Human-First</h4>
         <p class="mt-2 text-sm leading-relaxed">
@@ -272,18 +280,18 @@
     </section>
 
     <!-- CTA -->
-    <section class="bg-blue-600 text-white text-center py-10 px-6 relative">
+    <section class="bg-black text-white text-center py-10 px-6 relative">
       <a href="https://www.facebook.com/profile.php?id=61577577565159" target="_blank" aria-label="Finclair Facebook Page" class="absolute top-4 right-6 hover:opacity-80">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 fill-current text-white">
           <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.325 24H12v-9.294H9.097v-3.622H12V8.413c0-2.877 1.762-4.443 4.338-4.443 1.233 0 2.292.092 2.598.133v3.014l-1.783.001c-1.4 0-1.671.668-1.671 1.648v2.158h3.343l-.436 3.622h-2.907V24h5.698C23.407 24 24 23.406 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
         </svg>
       </a>
       <h3 class="text-2xl font-bold mb-6">Ready to simplify your finances?</h3>
-      <a href="contact.html" class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100">Contact Us</a>
+      <a href="contact.html" class="bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-100">Contact Us</a>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-blue-600 text-white text-center py-6 mt-auto">
+    <footer class="bg-black text-white text-center py-6 mt-auto">
       <p class="text-sm">© 2025 Finclair Bookkeeping & Tax. All rights reserved.</p>
     </footer>
 
@@ -296,7 +304,7 @@
 
     <!-- Back to Top (blue circle, black skinny arrow) -->
     <button id="backToTop" aria-label="Back to top" title="Back to top">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M12 19V5M5 12l7-7 7 7"/>
     </svg>
     </button>
